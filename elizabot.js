@@ -675,9 +675,26 @@ ElizaBot.prototype.reset = function () {
     }
 };
 
+ElizaBot.prototype.restoreState = function (stateObj) {
+    if (stateObj.mem !== undefined) {
+        this.mem = stateObj.mem;
+    }
+    if (stateObj.lastchoice !== undefined) {
+        this.lastchoice = stateObj.lastchoice;
+    }
+};
+
+ElizaBot.prototype.retrieveState = function () {
+    var stateObj = {};
+    stateObj.mem = this.mem;
+    stateObj.lastchoice = this.lastchoice;
+
+    return stateObj;
+};
+
 ElizaBot.prototype._init = function () {
     // parse data and convert it from canonical form to internal use
-    // prodoce synonym list
+    // produce synonym list
     var synPatterns = {};
 
     if ((this.elizaSynons) && (typeof this.elizaSynons == 'object')) {
