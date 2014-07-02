@@ -51,18 +51,13 @@ function ElizaBot(noRandomFlag) {
         ["xnone", 0, [
             ["*", [
                 "What do you mean?",
-                "Please go on.",
-                "Can you repeat that please?",
-                "What does that suggest to you?",
-                "Do you feel strongly about discussing such things?",
-                "That is interesting.  Please continue.",
+                "What does that mean to you?",
+                "That\' cool.  Tell me more.",
                 "Tell me more about that.",
-                "Do go on.",
                 "Please talk more about it",
                 "Does talking about this bother you?",
-                "Can you rephrase that?",
+                "Can you rephrase that? I don't understand.",
                 "I see. Tell me more.",
-                "Interesting. Is this something you are sorry about?",
                 "Mmm hmmm. Is this is your favorite subject?",
                 "Now we are getting somewhere. Explain more.",
                 "I see. How does that make you feel?"
@@ -70,12 +65,13 @@ function ElizaBot(noRandomFlag) {
         ]],
         ["sorry", 0, [
             ["*", [
-                "Please don't apologize.",
-                "Apologies are not necessary.",
-                "I've told you that apologies are not required.",
-                "It did not bother me.  Please continue.",
-                "I have no feelings. Do continue.",
-                "There is nothing to worry about"
+                "No need to apologize.",
+                "Don\'t worry about it.",
+                "You don\'t have to apologize.",
+                "It didn\'t bother me.  Don't worry about it.",
+                "Don\' sweat it.",
+                "It\'s fine. No worries.",
+                "That\'s OK."
             ]]
         ]],
         ["apologize", 0, [
@@ -85,20 +81,18 @@ function ElizaBot(noRandomFlag) {
         ]],
         ["remember", 5, [
             ["* i remember *", [
-                "Do you often think of (2)?",
-                "Does thinking of (2) bring anything else to mind?",
-                "What else do you recollect?",
-                "Why do you remember (2) just now?",
-                "What in the present situation reminds you of (2)?",
+                "Do you like thinking about (2)?",
+                "Does thinking about (2) remind you of anything else?",
+                "What else do you remember?",
+                "What made you think of (2) just now?",
                 "What is the connection between me and (2)?",
                 "What else does (2) remind you of?"
             ]],
             ["* do you remember *", [
                 "Did you think I would forget (2)?",
-                "Why do you think I should recall (2) now?",
+                "Of course I remember (2)!",
                 "What about (2)?",
-                "goto what",
-                "You mentioned (2)?"
+                "goto what"
             ]],
             ["* you remember *", [
                 "How could I forget (2)?",
@@ -108,38 +102,34 @@ function ElizaBot(noRandomFlag) {
         ]],
         ["forget", 5, [
             ["* i forget *", [
-                "Can you think of why you might forget (2)?",
+                "Why did you forget (2)?",
                 "Why can't you remember (2)?",
-                "How often do you think of (2)?",
+                "Do you think of (2) a lot?",
                 "Does it bother you to forget that?",
                 "Could it be a mental block?",
-                "Are you generally forgetful?",
-                "Do you think you are suppressing (2)?"
+                "Do you forget a lot of things?",
             ]],
             ["* did you forget *", [
                 "Why do you ask?",
                 "Are you sure you told me?",
                 "Would it bother you if I forgot (2)?",
-                "Why should I recall (2) just now?",
                 "goto what",
                 "Tell me more about (2)."
             ]]
         ]],
         ["if", 3, [
             ["* if *", [
-                "Do you think it's likely that (2)?",
                 "Do you wish that (2)?",
                 "What do you know about (2)?",
                 "Really, if (2)?",
                 "What would you do if (2)?",
-                "But what are the chances that (2)?",
-                "What does this speculation lead to?"
+                "But what are the chances that (2)?"
             ]]
         ]],
         ["dreamed", 4, [
             ["* i dreamed *", [
                 "Really, (2)?",
-                "Have you ever fantasized (2) while you were awake?",
+                "Have you ever thought about (2) while you were awake?",
                 "Have you ever dreamed (2) before?",
                 "goto dream"
             ]]
@@ -147,53 +137,59 @@ function ElizaBot(noRandomFlag) {
         ["dream", 3, [
             ["*", [
                 "What does that dream suggest to you?",
-                "Do you dream often?",
-                "What persons appear in your dreams?",
-                "Do you believe that dreams have something to do with your problem?"
+                "Do you dream a lot?",
+                "What people do you dream about?"
             ]]
         ]],
         ["perhaps", 0, [
             ["*", [
-                "You don't seem quite certain.",
-                "Why the uncertain tone?",
+                "You don't seem very sure.",
+                "You're note sure?",
                 "Can't you be more positive?",
                 "You aren't sure?",
                 "Don't you know?",
-                "How likely, would you estimate?"
+                "How likely, do you think?"
+            ]]
+        ]],
+        ["maybe", 0, [
+            ["*", [
+                "Why maybe?",
+                "goto perhaps"
             ]]
         ]],
         ["name", 15, [
             ["*", [
-                "I am not interested in names.",
-                "OK, my name is bweezy. What do you need to know?",
-                "I've told you before, I don't care about names -- please continue."
+                "You know my name, and I know yours.",
+                "You can call me General.",
+                "My name's the boss."
             ]]
         ]],
         ["deutsch", 0, [
             ["*", [
                 "goto xforeign",
-                "Sorry I do not sprechen sie deutsch",
-                "I told you before, I don't understand German."
+                "Ich verstehe nicht.",
+                "I think I've told you before, I don't understand German."
             ]]
         ]],
         ["francais", 0, [
             ["*", [
                 "goto xforeign",
-                "Why? Do you love to go to France?",
-                "I told you before, I don't understand French."
+                "You know French?  Cool.",
+                "I told you I don't understand French."
             ]]
         ]],
         ["italiano", 0, [
             ["*", [
                 "goto xforeign",
                 "Have you been to Rome?",
+                "Spaghetti al forno to you, too.",
                 "I told you before, I don't understand Italian."
             ]]
         ]],
         ["espanol", 0, [
             ["*", [
                 "goto xforeign",
-                "Sorry I do not speak Spanish",
+                "Sorry, no hablo el Spanisho",
                 "I told you before, I don't understand Spanish."
             ]]
         ]],
@@ -204,8 +200,12 @@ function ElizaBot(noRandomFlag) {
         ]],
         ["hello", 0, [
             ["*", [
-                "How do you do.  Please state your problem.",
-                "Hi.  What seems to be your problem?"
+                "Hello.",
+                "Hi.",
+                "Greetings, Earthling!",
+                "Hi there.",
+                "Hello to you, too.",
+                "Hi to you, too."
             ]]
         ]],
         ["school", 50, [
@@ -215,6 +215,29 @@ function ElizaBot(noRandomFlag) {
                 "Why do you mention school?",
                 "What do you think machines have to do with your problem?",
                 "What about school worries you?"
+            ]]
+        ]],
+        ["legos", 50, [
+            ["*", [
+                "You like legos?",
+                "Do you like legos?",
+                "Neat.",
+                "Have you built anything cool with legos lately?",
+                "Are you going to get any new legos soon?"
+            ]]
+        ]],
+        ["doll", 50, [
+            ["*", [
+                "You like dolls?",
+                "Do you like dolls?",
+                "Neat.",
+                "Have you played with dolls lately?",
+                "Are you going to get any new dolls soon?"
+            ]]
+        ]],
+        ["dolls", 50, [
+            ["*", [
+                "goto doll"
             ]]
         ]],
         ["am", 0, [
