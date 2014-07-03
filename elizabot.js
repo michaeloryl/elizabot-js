@@ -52,7 +52,7 @@ function ElizaBot(noRandomFlag) {
             ["*", [
                 "What do you mean?",
                 "What does that mean to you?",
-                "That\' cool.  Tell me more.",
+                "That' cool.  Tell me more.",
                 "Tell me more about that.",
                 "Please talk more about it",
                 "Does talking about this bother you?",
@@ -66,12 +66,12 @@ function ElizaBot(noRandomFlag) {
         ["sorry", 0, [
             ["*", [
                 "No need to apologize.",
-                "Don\'t worry about it.",
-                "You don\'t have to apologize.",
-                "It didn\'t bother me.  Don't worry about it.",
-                "Don\' sweat it.",
-                "It\'s fine. No worries.",
-                "That\'s OK."
+                "Don't worry about it.",
+                "You don't have to apologize.",
+                "It didn't bother me.  Don't worry about it.",
+                "Don' sweat it.",
+                "It's fine. No worries.",
+                "That's OK."
             ]]
         ]],
         ["apologize", 0, [
@@ -536,13 +536,13 @@ function ElizaBot(noRandomFlag) {
             ["* @everyone *", [
                 "Really, (2)?",
                 "Surely not (2).",
-                "Can you think of anyone in particular?",
+                "Can you think of anybody in particular?",
                 "Who, for example?",
                 "Are you thinking of a very special person?",
-                "Who, may I ask?",
+                "Who do you mean?",
                 "Someone special perhaps?",
                 "You have a particular person in mind, don't you?",
-                "Who do you think you're talking about?"
+                "Who are you talking about?"
             ]]
         ]],
         ["everybody", 2, [
@@ -564,7 +564,7 @@ function ElizaBot(noRandomFlag) {
             ["*", [
                 "Can you think of a specific example?",
                 "When?",
-                "What incident are you thinking of?",
+                "Which time are you thinking of?",
                 "Really, always?"
             ]]
         ]],
@@ -587,11 +587,11 @@ function ElizaBot(noRandomFlag) {
         ]],
         ["different", 0, [
             ["*", [
-                "How is it different?",
+                "How's that different?",
                 "What differences do you see?",
-                "What does that difference suggest to you?",
-                "What other distinctions do you see?",
-                "What do you suppose that disparity means?",
+                "What does that difference mean?",
+                "What else did you notice?",
+                "What do you suppose that difference means?",
                 "Could there be some connection, do you suppose?",
                 "How?"
             ]]
